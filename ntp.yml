@@ -1,0 +1,8 @@
+---
+- hosts: 127.0.0.1
+  sudo: yes
+  connection: local
+  
+  tasks:
+  - apt: name=ntp state=present
+  - service: name=ntp state=started enabled=yes
